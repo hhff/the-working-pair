@@ -1,25 +1,14 @@
-| {{!< default }}
+#index
+  #title.row.text-center.hidden
+    .small-10.small-offset-1.columns
+      h1 The Working Pair
 
-| {{#foreach posts}}
-article.post role="article" itemscope="" itemtype="//schema.org/Article"
+  #names.hidden
+    .row.text-center
+      .small-10.small-offset-1.medium-6.medium-offset-3.columns
+          | {{!< default }}
 
-  header.post__header
-    time.post__date itemprop="datePublished" {{ date format="dddd DD MMM YYYY" }}
-    h1.post__title itemprop="headline"
-      a href="{{{ url }}}" rel="bookmark" {{ title }}
-
-  section.post__content itemprop="articleBody" {{ excerpt }}...
-  footer.post__footer
-
-    .post__tags
-      | {{#if tags}}
-      .tags itemprop="keywords"
-        span Tags: {{tags separator=", "}}
-      | {{/if}}
-
-| {{/foreach}}
-
-.blog__pagination
-  | {{#if pagination}}
-    {{ pagination }}
-  | {{/if}}
+          | {{#foreach posts}}
+          h3.name
+            a href="{{{ url }}}" {{ title }}
+          | {{/foreach}}

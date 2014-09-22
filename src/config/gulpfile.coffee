@@ -22,10 +22,10 @@ paths =
   coffee          : [ "src/assets/coffeescript/**/*.coffee" ]
 
 # BrowserSync
-gulp.task 'browser-sync', ->
-  browserSync.init null,
-    notify : true
-    proxy : "127.0.0.1:2368"
+# gulp.task 'browser-sync', ->
+#   browserSync.init null,
+#     notify : true
+#     proxy : "127.0.0.1:2368"
 
 # Tasks
 gulp.task 'slim', ->
@@ -46,7 +46,7 @@ gulp.task "sass", ->
   .pipe run.minifyCss()
   .pipe run.filesize()
   .pipe gulp.dest "assets/css/"
-  .pipe run.notify message : 'SASS compiled and minified!'
+  # .pipe run.notify message : 'SASS compiled and minified!'
   .pipe reload stream : true
 
 gulp.task "coffee", ->
@@ -58,7 +58,7 @@ gulp.task "coffee", ->
   .pipe run.uglify()
   .pipe run.filesize()
   .pipe gulp.dest "assets/js/"
-  .pipe run.notify message : 'Coffeescript compiled and minified!'
+  # .pipe run.notify message : 'Coffeescript compiled and minified!'
   .pipe reload stream : true, once : true
 
 gulp.task "document", ->
@@ -82,10 +82,10 @@ gulp.task "package", ->
   .pipe gulp.dest ""
 
 # Default
-gulp.task "default", [ "browser-sync", "watch" ]
+gulp.task "default", [ "watch" ]
 
 # Watch
-gulp.task "watch", ['browser-sync'], () ->
+gulp.task "watch", () ->
   gulp.watch paths.slim,        ['slim']
   gulp.watch paths.sass,        ['sass']
   gulp.watch paths.coffee,      ['coffee']

@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html class="no-js blog" itemscope="" itemtype="//schema.org/WebPage" lang="en-US">
   <head>
-    {{> meta }}<link rel="stylesheet" href="{{asset "css/style.min.css"}}" /><link rel="stylesheet" href="{{asset "css/custom.css"}}" />{{ghost_head}}
+    {{> meta }}<link rel="stylesheet" href="{{asset "css/main.min.css"}}" />{{ghost_head}}
   </head>
-  <body class="{{ body_class }}" itemscope="" itemtype="//schema.org/Blog">
-    <main class="wrapper" role="main">
-      <header class="blog__header">
-        {{> header }}
-      </header>
-      <section class="blog__content">
-        {{{ body }}}
-      </section>
-      <footer class="blog__footer">
-        {{> footer }}
-      </footer>
-    </main>{{ghost_foot}}
+  <body class="{{ body_class }} hidden" itemscope="" itemtype="//schema.org/Blog">
+    <section>
+      {{{ body }}}
+    </section>
   </body>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.6.0/headroom.min.js"></script>
   <script src='{{asset "js/plugins.min.js"}}'></script><script src='{{asset "js/scripts.min.js"}}'></script>
   <script type="text/javascript">
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

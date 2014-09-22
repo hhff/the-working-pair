@@ -1,13 +1,16 @@
-| {{!< default }}
-| {{#post}}
+#post
+  | {{!< default }}
 
-article.post role="article" itemscope="" itemtype="//schema.org/Article"
+  | {{> nav }}
 
-  header.post__header
-    time.post__date itemprop="datePublished" {{ date format="dddd DD MMM YYYY" }}
-    h1.post__title itemprop="headline" {{ title }}
+  | {{#post}}
 
-  section.post__content itemprop="articleBody" {{ content }}
-  footer.post__footer
+  article role="article" itemscope="" itemtype="//schema.org/Article"
 
-| {{/post}}
+    header.text-center
+      h1 itemprop="headline" {{ title }}
+
+    section itemprop="articleBody" {{ content }}
+    footer
+
+  | {{/post}}

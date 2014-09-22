@@ -1,0 +1,31 @@
+a {
+  &:link, &:visited {
+    color: $black;
+  }
+
+  &:hover {
+    color: $black;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  @include aa-text();
+}
+
+h1 {
+  @extend %Sentinel-Bold;
+  font-size: 3.75rem;
+}
+
+h3 {
+  @extend %Sentinel-Bold;
+  font-size: 1.25rem;
+}
+
+body {
+  @include transition(opacity $long-transition ease-in-out);
+}
+
+p {
+  @extend %Sentinel-Book;
+}

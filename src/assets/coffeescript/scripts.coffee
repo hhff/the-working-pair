@@ -1,8 +1,8 @@
-#=================================================
-#            Kaidan - Theme Scripts              =
-#=================================================
+window.onload = ->
+  $('body').removeClass 'hidden'
+  $('#title').removeClass 'hidden'
+  $('#names').removeClass 'hidden'
 
-$ ->
-  console.log "Kaidan is locked and loaded..."
-
-#-----  End of Kaidan - Theme Scripts  -----------
+  if postsNav = document.querySelector "nav"
+    headroom  = new Headroom postsNav
+    headroom.init()

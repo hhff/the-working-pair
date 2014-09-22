@@ -1,0 +1,32 @@
+#index {
+  height: 100%;  
+  background: #303538 url(../images/TWP_Home.jpg) no-repeat center center;
+  background-size: cover;
+
+  #title {
+    @include transition(opacity $long-transition ease-in-out $mid-transition);
+
+    padding-top: $standard-bumper;
+  }
+
+  #names {
+    @include transition(opacity $long-transition ease-in-out $long-transition);
+
+    position: absolute;
+    bottom: $standard-bumper * 2;
+    width: 100%;
+
+    .name {
+      display: inline-block;
+      line-height: $standard-bumper;
+
+      &:after {
+        content: ", ";
+      }
+
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}

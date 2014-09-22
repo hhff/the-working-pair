@@ -1,0 +1,35 @@
+nav {
+  width: 100%;
+  top: 0px;
+  height: $nav-height;
+  position: fixed;
+  margin: 0px;
+  background: $orange url(../images/logo_120x120.jpg) no-repeat center center;
+  background-size: contain;
+  z-index: 1;
+
+  .back {
+    padding-left: 15px;
+    width: 70px;
+    height: 60px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  h6 {
+    @extend %Sentinel-Bold;
+    margin: 0;
+  }
+
+  &.headroom {
+    transition: transform 200ms linear;
+  }
+
+  &.headroom--pinned {
+    transform: translateY(0%);
+  }
+
+  &.headroom--unpinned {
+    transform: translateY(-92%);
+  }
+}
