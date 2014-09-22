@@ -1,5 +1,6 @@
 #post {
   article {
+    @include transition(opacity $long-transition ease-in-out $mid-transition);
     padding-top: $nav-height;
     @extend %Sentinel-Book;
 

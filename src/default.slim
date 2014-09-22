@@ -9,19 +9,10 @@ html class="no-js blog" lang="en-US" itemscope="" itemtype="//schema.org/WebPage
     | {{ghost_head}}
 
   body class="{{ body_class }} hidden" itemscope="" itemtype="//schema.org/Blog"
-
-    / nav.blog__nav {{> nav }}
-    / header.blog__header {{> header }}
     section {{{ body }}}
-    / footer.blog__footer {{> footer }}
 
-    / | {{ghost_foot}}
-
-  / Load in Javascript libraries that should be loaded after the content
   script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"
   script src="//cdnjs.cloudflare.com/ajax/libs/headroom/0.6.0/headroom.min.js"
-
-  <script src='{{asset "js/plugins.min.js"}}'></script>
   <script src='{{asset "js/scripts.min.js"}}'></script>
 
   / Google Analytics, remember to update the UA-code
