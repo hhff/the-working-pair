@@ -10,11 +10,27 @@ a {
 
 h1, h2, h3, h4, h5, h6, p {
   @include aa-text();
+  color: $black;
 }
 
 h1 {
-  @extend %Sentinel-Bold;
-  font-size: 3.75rem;
+  @extend %LydianMTStd;
+  font-size: 2.75rem;
+  letter-spacing: -0.18rem;
+
+  @media #{$xlarge-up} {
+    font-size: 3.75rem;
+  }
+
+  @media #{$xxlarge-up} {
+    font-size: 4.75rem;
+  }
+}
+
+h2 {
+  @extend %Sentinel-Light;
+  font-size: 1.4rem;
+  letter-spacing: -0.1rem;
 }
 
 h3 {
@@ -28,4 +44,22 @@ body {
 
 p {
   @extend %Sentinel-Book;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+
+blockquote {
+  text-align: center;
+}
+
+section {
+  height: 100%;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.fader {
+  @include transition(opacity $long-transition ease-in-out);
 }

@@ -1,0 +1,26 @@
+footer {
+  height: 300px;
+  margin-top: 150px;
+  background-color: $gray;
+  text-align: center;
+
+  .back {
+    @extend %LydianMTStd;
+    font-size: $standard-bumper * 2;
+    margin-top: 140px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 16px;
+    font-size: 0.8rem;
+
+    @media #{$medium-up} {
+      margin-top: 140px;
+      letter-spacing: 26px;
+      font-size: 1.4rem;
+    }
+
+    &:hover {
+      text-decoration: line-through;
+    }
+  }
+}

@@ -1,31 +1,53 @@
 #index {
-  height: 100%;  
-  background: #303538 url(../images/TWP_Home.jpg) no-repeat center center;
-  background-size: cover;
+  height: 100%;
 
-  #title {
-    @include transition(opacity $long-transition ease-in-out $mid-transition);
+  #image {
+    height: 100%;
 
-    padding-top: $standard-bumper;
+    &.homepage-0 {
+      background: url(../images/homepage-lamp.jpg) no-repeat left top/cover;
+    }
+
+    &.homepage-1 {
+      background: url(../images/homepage-bed.jpg) no-repeat left top/cover;
+    }
+
+    &.homepage-2 {
+      background: url(../images/homepage-bass.jpg) no-repeat left top/cover;
+    }
+
+    &.homepage-3 {
+      background: url(../images/homepage-cat.jpg) no-repeat left top/cover;
+    }
+
+    &.homepage-4 {
+      background: url(../images/homepage-pastry.jpg) no-repeat left top/cover;
+    }
   }
 
-  #names {
-    @include transition(opacity $long-transition ease-in-out $long-transition);
-
+  #left {
     position: absolute;
-    bottom: $standard-bumper * 2;
-    width: 100%;
+    z-index: 1;
+    padding-top: $standard-bumper;
+    padding-left: $standard-bumper * 3;
 
-    .name {
-      display: inline-block;
-      line-height: $standard-bumper;
+    #title {
+      @include transition(opacity $long-transition ease-in-out $mid-transition);
+      padding-top: $standard-bumper;
+      position: relative;
+    }
 
-      &:after {
-        content: ", ";
-      }
+    #names {
+      @include transition(opacity $long-transition ease-in-out $long-transition);
+      position: relative;
+      padding-top: $standard-bumper / 4;
 
-      &:last-child:after {
-        content: "";
+      .name {
+        line-height: $standard-bumper * 2;
+
+        &:hover {
+          text-decoration: line-through;
+        }
       }
     }
   }

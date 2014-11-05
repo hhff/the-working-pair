@@ -1,42 +1,114 @@
 #post {
+  @include clearfix();
+  // background-color: #EFF7FF;
+
+  .standard-column {
+    @extend .small-10, .small-offset-1, .medium-8, .medium-offset-2, .large-6, .large-offset-3, .columns;
+  }
+
+  .breakout-column {
+    @extend .small-12, .small-offset-0, .medium-10, .medium-offset-1, .large-8, .large-offset-2, .columns;
+  }
+
   article {
+    @include clearfix();
     @include transition(opacity $long-transition ease-in-out $mid-transition);
-    padding-top: $nav-height;
     @extend %Sentinel-Book;
 
-    p {
-      img {
-        width: 100%;
-        padding-bottom: 1.5rem;
-      }
-    }
-
-    .small-quote {
-      @extend %Sentinel-Light;
-      font-size: 1.5rem;
-      line-height: 2.1rem;
-
-      img {
-        padding-bottom: 1.5rem;
-      }
-    }
-
-    .large-quote {
-      @extend %Sentinel-Light;
-      text-align: center;
-      font-size: 3.5rem;
-      line-height: 3.5rem;
-      padding: 50px 0;
-    }
-
     header {
-      padding: 100px 0;
+      @include clearfix();
+      height: 250px;
+      width: 100%;
+      top: 0;
+      z-index: -1;
+      // background-color: #EFFFFB;
+
+      #begin {
+        margin-top: 200px;
+        height: 50px;
+        width: 50px;
+        background: url(../images/glyph-curl.png) no-repeat center center/cover;
+        @extend .standard-column;
+      }
     }
 
-    footer {
-      height: 200px;
-      padding-top: 1.5rem;
-      background-color: wheat;  
+    section {
+      @include clearfix();
+      z-index: 1;
+
+      h1, h2, h3, p {
+        color: $black;
+        @extend .standard-column;
+      }
+
+      h2 {
+        @extend %LydianMTStd;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.1rem;
+        padding-left: 0px;
+        text-decoration: underline;
+        padding-bottom: $standard-bumper;
+        font-size: $standard-bumper * 2;
+      }
+
+      h3 {
+        font-style: italic;
+        padding-bottom: $standard-bumper * 8;
+      }
+
+      p {
+
+        img {
+          @media #{$small-only} {
+            padding-bottom: $standard-bumper;
+          }
+
+          &:last-of-type {
+            padding-bottom: 0;
+          }
+        }
+
+        &.breakout {
+          padding: $standard-bumper * 4 0;
+          @extend .breakout-column;
+        }
+      }
+
+      blockquote {
+        p {
+          @extend %LydianMTStd;
+          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          color: $black;
+          padding: $standard-bumper * 4 0;
+        }
+      }
+
+      blockquote {
+        blockquote {
+          p {
+            @extend %Sentinel-Book;
+            margin: $standard-bumper * 2 0 $standard-bumper * 4 0 ;
+            text-transform: none;
+            letter-spacing: 0rem;
+            text-align: center;
+            font-style: italic;
+            font-size: 2.875rem;
+            @extend .breakout-column;
+            text-decoration: initial;
+            color: $black;
+          }
+        }
+      }
+    }
+
+    #fin {
+      height: 50px;
+      width: 50px;
+      background: url(../images/glyph-line.png) no-repeat center center/cover;
+      margin: auto;
+      margin-top: 150px;
     }
   }
 }

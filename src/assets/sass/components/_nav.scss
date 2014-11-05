@@ -4,21 +4,15 @@ nav {
   height: $nav-height;
   position: fixed;
   margin: 0px;
-  background: $orange url(../images/logo_120x120.jpg) no-repeat center center;
-  background-size: contain;
   z-index: 1;
 
   .back {
-    padding-left: 15px;
+    margin-top: 15px;
+    margin-left: 25px;
     width: 70px;
-    height: 60px;
-    display: table-cell;
-    vertical-align: middle;
-  }
-
-  h6 {
-    @extend %Sentinel-Bold;
-    margin: 0;
+    height: 50px;
+    background: url(../images/back-button.png) no-repeat center center/cover;
+    display: block;
   }
 
   &.headroom {
@@ -30,6 +24,6 @@ nav {
   }
 
   &.headroom--unpinned {
-    transform: translateY(-92%);
+    transform: translateY(-100%);
   }
 }

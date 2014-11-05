@@ -1,4 +1,5 @@
 #post
+
   | {{!< default }}
 
   | {{> nav }}
@@ -7,10 +8,16 @@
 
   article.hidden role="article" itemscope="" itemtype="//schema.org/Article"
 
-    header.text-center
-      h1 itemprop="headline" {{ title }}
+    header
+      #begin
+    / header style="background: url({{image}}) no-repeat center bottom/cover"
 
-    section itemprop="articleBody" {{ content }}
-    footer
+    section itemprop="articleBody"
+      h1 itemprop="headline" {{ title }}
+      | {{ content }}
+
+    #fin
 
   | {{/post}}
+
+| {{> footer}}

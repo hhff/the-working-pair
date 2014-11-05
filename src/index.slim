@@ -1,14 +1,14 @@
 #index
-  #title.row.text-center.hidden
-    .small-10.small-offset-1.columns
+  #left
+    #title.hidden
       h1 The Working Pair
 
-  #names.hidden
-    .row.text-center
-      .small-10.small-offset-1.medium-6.medium-offset-3.columns
-          | {{!< default }}
+    #names.hidden
+      | {{!< default }}
 
-          | {{#foreach posts}}
-          h3.name
-            a href="{{{ url }}}" {{ title }}
-          | {{/foreach}}
+      | {{#foreach posts}}
+      h2.name
+        a href="{{{ url }}}" {{ title }}
+      | {{/foreach}}
+
+  #image.medium-12.large-9.large-offset-3.columns

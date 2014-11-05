@@ -1,15 +1,17 @@
 <div id="post">
   {{!< default }}{{> nav }}{{#post}}
   <article class="hidden" itemscope="" itemtype="//schema.org/Article" role="article">
-    <header class="text-center">
+    <header>
+      <div id="begin"></div>
+    </header>
+    <section itemprop="articleBody">
       <h1 itemprop="headline">
         {{ title }}
       </h1>
-    </header>
-    <section itemprop="articleBody">
       {{ content }}
     </section>
-    <footer></footer>
+    <div id="fin"></div>
   </article>
   {{/post}}
 </div>
+{{> footer}}
