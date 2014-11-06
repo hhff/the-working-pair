@@ -1,6 +1,6 @@
 {
   "name": "The Working Pair",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "gulpfile.js",
   "devDependencies": {
     "yargs"            : "latest",
