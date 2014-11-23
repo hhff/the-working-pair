@@ -28,3 +28,9 @@
     #{$prefix}transition: $declarations;
   }
 }
+
+@mixin transform($params) {
+  -webkit-transform: $params;
+  -moz-transform:    $params;
+  transform:         $params;
+}

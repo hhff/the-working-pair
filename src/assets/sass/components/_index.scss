@@ -84,7 +84,7 @@
     opacity: 1;
 
     &.hidden {
-      -webkit-transform: translateY(60px);
+      @include transform(translateY(60px));
       opacity: 0;
     }
   }
