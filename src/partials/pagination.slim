@@ -1,0 +1,10 @@
+.pagination.hidden role="pagination"
+  | {{#if prev}}
+    <a class="newer-posts" href="{{page_url prev}}">&#171;</a>
+  | {{/if}}
+
+  span.page-number {{page}} of {{pages}}
+
+  | {{#if next}}
+    <a class="older-posts" href="{{page_url next}}">&#187;</a>
+  | {{/if}}

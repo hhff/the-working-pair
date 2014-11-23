@@ -6,6 +6,7 @@
 
     &.homepage-0 {
       background: url(../images/homepage-lamp.jpg) no-repeat left top/cover;
+      background-position: 0% 5%;
     }
 
     &.homepage-1 {
@@ -18,10 +19,12 @@
 
     &.homepage-3 {
       background: url(../images/homepage-cat.jpg) no-repeat left top/cover;
+      background-position: 75% 50%;
     }
 
     &.homepage-4 {
       background: url(../images/homepage-pastry.jpg) no-repeat left top/cover;
+      background-position: 10% 75%;
     }
   }
 
@@ -41,6 +44,7 @@
       @include transition(opacity $long-transition ease-in-out $long-transition);
       position: relative;
       padding-top: $standard-bumper / 4;
+      padding-left: 20px;
 
       .name {
         line-height: $standard-bumper * 2;
@@ -49,6 +53,39 @@
           text-decoration: line-through;
         }
       }
+    }
+  }
+
+  #contact {
+    cursor: pointer;
+    color: $black;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    left: 10px;
+    bottom: 10px;
+    position: fixed;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  #by-line {
+    @include transition(all $mid-transition ease-in-out);
+    color: $black;
+    @extend %Sentinel-Light-Italic;
+    position: fixed;
+    height: 50px;
+    background-color: white;
+    bottom: 10px;
+    width: 150px;
+    text-align: center;
+    padding-top: 13px;
+    left: 70px;
+    opacity: 1;
+
+    &.hidden {
+      -webkit-transform: translateY(60px);
+      opacity: 0;
     }
   }
 }

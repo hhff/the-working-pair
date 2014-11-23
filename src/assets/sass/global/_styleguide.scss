@@ -15,16 +15,16 @@ h1, h2, h3, h4, h5, h6, p {
 
 h1 {
   @extend %LydianMTStd;
-  font-size: 2.75rem;
+  font-size: 3.25rem;
   letter-spacing: -0.18rem;
 
-  @media #{$xlarge-up} {
-    font-size: 3.75rem;
-  }
+  // @media #{$xlarge-up} {
+  //   font-size: 3.75rem;
+  // }
 
-  @media #{$xxlarge-up} {
-    font-size: 4.75rem;
-  }
+  // @media #{$xxlarge-up} {
+  //   font-size: 4.75rem;
+  // }
 }
 
 h2 {

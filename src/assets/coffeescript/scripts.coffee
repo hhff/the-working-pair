@@ -16,14 +16,15 @@ window.onload = ->
   $('body').removeClass 'hidden'
   $('#title').removeClass 'hidden'
   $('#names').removeClass 'hidden'
+  $('.pagination').removeClass 'hidden'
   $('#post article').removeClass 'hidden'
 
-  $('a').on 'click', ->
-    $('body').addClass 'hidden'
+  $('a').on 'click', (e) ->
+    unless $(e.target).parent().hasClass 'mail-to'
+      $('body').addClass 'hidden'
 
-  # if postsNav = document.querySelector "nav"
-  #   headroom  = new Headroom postsNav
-  #   headroom.init()
+  $('#contact').on 'click', ->
+    $('#by-line').toggleClass 'hidden'
 
   # find clusters of images on Post page
   for image in $('p img:first-child')

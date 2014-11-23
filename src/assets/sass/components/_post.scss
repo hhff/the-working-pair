@@ -1,6 +1,5 @@
 #post {
   @include clearfix();
-  // background-color: #EFF7FF;
 
   .standard-column {
     @extend .small-10, .small-offset-1, .medium-8, .medium-offset-2, .large-6, .large-offset-3, .columns;
@@ -21,7 +20,6 @@
       width: 100%;
       top: 0;
       z-index: -1;
-      // background-color: #EFFFFB;
 
       #begin {
         margin-top: 200px;
@@ -53,8 +51,8 @@
       }
 
       h3 {
-        @extend %Sentinel-LightItalic;
-        padding-bottom: $standard-bumper * 8;
+        @extend %Sentinel-Light-Italic;
+        padding-bottom: $standard-bumper * 2;
       }
 
       p {
@@ -88,7 +86,7 @@
       blockquote {
         blockquote {
           p {
-            @extend %Sentinel-LightItalic;
+            @extend %Sentinel-Light-Italic;
             margin: $standard-bumper * 2 0 $standard-bumper * 4 0 ;
             text-transform: none;
             letter-spacing: 0rem;
