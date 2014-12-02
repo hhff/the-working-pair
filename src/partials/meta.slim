@@ -11,6 +11,7 @@ title itemprop="name" {{meta_title}}
 | {{/post}}
 | {{else}}
 meta name="description" content="{{meta_description}}"
+meta property="og:image" content="{{@blog.cover}}"
 | {{/if}}
 
 meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui"
@@ -20,7 +21,6 @@ meta name="google-site-verification" content=""
 meta property="og:title" content="{{meta_title}}"
 meta property="og:url" content="{{url}}"
 meta property="og:description" content="{{meta_description}}"
-meta property="og:image" content="{{@blog.cover}}"
 
 / Mobile, iOS and Windows 8-related meta tags
 meta name="mobile-web-app-capable" content="yes"
@@ -36,6 +36,3 @@ link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{@blog.logo}}"
 link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{@blog.logo}}"
 link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{@blog.logo}}"
 link rel="apple-touch-icon-precomposed" href="{{@blog.logo}}"
-
-/ Serving the generic site icon (think Favicon). Compressed PNG recommended
-link rel="shortcut icon" href="{{@blog.logo}}"

@@ -8,9 +8,17 @@
 
   .older-posts {
     padding-left: 10px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: line-through;
+    }
   }
 
   .newer-posts {
     padding-right: 10px;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: line-through;
+    }
   }
 }

@@ -57,6 +57,13 @@
 
       p {
 
+        a {
+          text-decoration: underline;
+          &:hover {
+            text-decoration: line-through;
+          }
+        }
+
         img {
           @media #{$small-only} {
             padding-bottom: $standard-bumper;

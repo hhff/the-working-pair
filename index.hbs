@@ -12,7 +12,7 @@
       </h2>
       {{/foreach}}
     </div>
-    {{pagination}}
+    {{#if pagination.prev}}{{pagination}}{{else}}{{#if pagination.next}}{{pagination}}{{/if}}{{/if}}
   </div>
   <div class="small-12 columns" id="image"></div>
   <div id="contact">

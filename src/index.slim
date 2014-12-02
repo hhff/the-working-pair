@@ -11,7 +11,13 @@
         a href="{{{ url }}}" {{ title }}
       | {{/foreach}}
 
+    | {{#if pagination.prev}}
     | {{pagination}}
+    | {{else}}
+    | {{#if pagination.next}}
+    | {{pagination}}
+    | {{/if}}
+    | {{/if}}
 
   #image.small-12.columns
 
